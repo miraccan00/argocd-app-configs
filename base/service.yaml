@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-service
+  labels:
+    app: my-app
+spec:
+  selector:
+    app: my-app
+  ports:
+    - name: http
+      port: 80        # Servisin dış dünyaya sunduğu port
+      targetPort: 8080 # Pod içinde çalışan container portu
